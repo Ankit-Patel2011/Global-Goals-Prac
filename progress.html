@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Tracking</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style> /* Your CSS styles go here /* Your CSS styles go here */
+
+
+
+
+
+
+/* Your CSS styles go here */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+button.open-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #b3b3b3;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    border-bottom: 1px solid #cdcaca;
+}
+
+.sidebar ul li:last-child {
+    border-bottom: none;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar ul li button {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+section {
+    margin-top: 20px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+#points, #tasks {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+#points h2, #tasks h2 {
+    margin-bottom: 10px;
+}
+
+#points-counter {
+    font-size: 2em;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.task-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.task {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
+}
+
+.task:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.task img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.task h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+.task p {
+    margin-bottom: 10px;
+}
+
+.task a {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+.task a:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+/* Your CSS styles go here */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+button.open-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    border-bottom: 1px solid #555;
+}
+
+.sidebar ul li:last-child {
+    border-bottom: none;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar ul li button {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+section {
+    margin-top: 20px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+#points, #tasks {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+#points h2, #tasks h2 {
+    margin-bottom: 10px;
+}
+
+#points-counter {
+    font-size: 2em;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.task-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.task {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
+}
+
+.task:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.task img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.task h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+.task p {
+    margin-bottom: 10px;
+}
+
+.task a {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+.task a:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Progress Tracking</h1>
+    </header>
+    <button class="open-btn" onclick="openSidebar()"> <i class="fa-regular fa-bars"></i> menu</button>
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <a href="https://ankit-patel2011.github.io/Global-Goals-Prac/index.html">Home</a>
+            <a href="https://ankit-patel2011.github.io/Global-Goals-Prac/news.html">News</a>
+            <a href="https://ankit-patel2011.github.io/Global-Goals-Prac/globalgoals.html"> Global goals</a>
+            <a href="https://ankit-patel2011.github.io/Global-Goals-Prac/Donate.html">Donate</a>
+            <a href="https://ankit-patel2011.github.io/Global-Goals-Prac/more.html">More</a>
+            <a href="https://ankit-patel2011.github.io/Global-Goals-Prac/review.html">Review</a>
+            <li><button onclick="closeSidebar()">Close Sidebar</button></li>
+        </ul>
+    </div>
+
+
+
+
+    <div class="container">
+
+
+
+
+        <section id="points">
+            <h2>Points Earned</h2>
+            <p id="points-counter">0</p>
+        </section>
+
+        <section id="tasks">
+            <h2>Tasks</h2>
+            <div class="task-container">
+                <div class="task">
+                    <img src="https://i.ytimg.com/vi/PjjWYHEuoKI/maxresdefault.jpg" alt="Video Icon">
+                    <h3>Watch an Educational Video</h3>
+                    <p>Watch a video related to Sustainable Development Goals (SDGs) to gain insights and knowledge.</p>
+                    <a href="https://example.com/video1" target="_blank">Watch Video</a>
+                </div>
+                <div class="task">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/002/206/011/small/article-icon-free-vector.jpg" alt="Article Icon">
+                    <h3>Read an Article</h3>
+                    <p>Read an article discussing a specific Sustainable Development Goal (SDG) to learn more about its importance.</p>
+                    <a href="https://en.wikipedia.org/wiki/Sustainable_Development_Goals" target="_blank">Read Article</a>
+                </div>
+                <div class="task">
+                    <img src="https://i.ytimg.com/vi/PjjWYHEuoKI/maxresdefault.jpg" alt="Video Icon">
+                    <h3>Watch an Educational Video</h3>
+                    <p>Watch a video related to Sustainable Development Goals (SDGs) to gain insights and knowledge.</p>
+                    <a href="https://example.com/video1" target="_blank">Watch Video</a>
+                </div>
+                <div class="task">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/002/206/011/small/article-icon-free-vector.jpg" alt="Article Icon">
+                    <h3>Read an Article</h3>
+                    <p>Read an article discussing a specific Sustainable Development Goal (SDG) to learn more about its importance.</p>
+                    <a href="https://en.wikipedia.org/wiki/Sustainable_Development_Goals" target="_blank">Read Article</a>
+                </div>
+        
+                <!-- Add more tasks here -->
+            </div>
+        </section>
+    </div>
+
+    <script >
+        // Function to update points counter
+function updatePointsCounter() {
+    // Get the total number of completed tasks
+    const completedTasks = document.querySelectorAll('input[type="checkbox"]:checked').length;
+    // Update points based on completed tasks (1 point per task)
+    const points = completedTasks;
+    // Update points counter display
+    document.getElementById('points-counter').textContent = points;
+}
+
+// Event listener for checkboxes
+document.querySelectorAll('input[type="checkbox"]').forEach(function(checkbox) {
+    checkbox.addEventListener('change', updatePointsCounter);
+});
+
+
+
+
+
+function openSidebar() {
+    document.getElementById("sidebar").style.width = "250px";
+}
+
+function closeSidebar() {
+    document.getElementById("sidebar").style.width = "0";
+}
+
+    </script> <!-- Link to your JavaScript file -->
+</body>
+</html>

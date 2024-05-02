@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Website</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->\
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+#quiz-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#question {
+    margin-bottom: 20px;
+}
+
+#options-container {
+    margin-bottom: 20px;
+}
+
+#options-container label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#submit-btn:hover {
+    background-color: #45a049;
+}
+
+#score-container {
+    display: none;
+    margin-top: 20px;
+}
+
+#score {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Hide the sidebar by default */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    padding-top: 50px;
+    transition: left 0.3s ease;
+}
+
+#sidebar-toggle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+#sidebar-links {
+    padding: 20px;
+}
+
+#sidebar-links a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+#sidebar-links a:hover {
+    text-decoration: underline;
+}
+
+#main-content {
+    margin-left: 250px; /* Adjust this value based on the sidebar width */
+    transition: margin-left 0.3s ease;
+    padding: 20px;
+}
+
+#sidebar.active {
+    left: 0;
+}
+
+#main-content.active {
+    margin-left: 0;
+}
+
+
+    </style>
+</head>
+
+
+
+<body>
+    <!-- <div id="sidebar">
+        <button id="sidebar-toggle">☰</button>
+        <div id="sidebar-links">
+            <a href="index.html">Home</a>
+            <a href="news.html">News</a>
+            <a href="goals.html">Goals</a>
+            <a href="donate.html">Donate</a>
+            <!-- Add more links as needed -->
+        </div>
+
+ -->
+
+    <div id="quiz-container">
+        <div id="question-container">
+            <h2 id="question"></h2>
+            <form id="quiz-form">
+                <div id="options-container"></div>
+                <button type="submit" id="submit-btn">Submit</button>
+            </form>
+        </div>
+        <div id="score-container">
+            <h2>Your Score:</h2>
+            <p id="score">-</p>
+        </div>
+    </div>
+
+    <script>
+
+const questions = [
+ 
+
+
+    {
+        question: "Which Sustainable Development Goal aims to end poverty in all its forms everywhere?",
+        options: ["SDG 1: No Poverty", "SDG 2: Zero Hunger", "SDG 3: Good Health and Well-being", "SDG 4: Quality Education"],
+        answer: "SDG 1: No Poverty"
+    },
+    {
+        question: "Which Sustainable Development Goal focuses on ensuring inclusive and equitable quality education for all?",
+        options: ["SDG 4: Quality Education", "SDG 5: Gender Equality", "SDG 6: Clean Water and Sanitation", "SDG 7: Affordable and Clean Energy"],
+        answer: "SDG 4: Quality Education"
+    },
+    {
+        question: "Which Sustainable Development Goal aims to achieve gender equality and empower all women and girls?",
+        options: ["SDG 5: Gender Equality", "SDG 6: Clean Water and Sanitation", "SDG 8: Decent Work and Economic Growth", "SDG 9: Industry, Innovation, and Infrastructure"],
+        answer: "SDG 5: Gender Equality"
+    },
+    {
+        question: "Which Sustainable Development Goal focuses on ensuring access to clean water and sanitation for all?",
+        options: ["SDG 6: Clean Water and Sanitation", "SDG 7: Affordable and Clean Energy", "SDG 9: Industry, Innovation, and Infrastructure", "SDG 10: Reduced Inequalities"],
+        answer: "SDG 6: Clean Water and Sanitation"
+    },
+    {
+        question: "Which Sustainable Development Goal aims to ensure access to affordable, reliable, sustainable, and modern energy for all?",
+        options: ["SDG 7: Affordable and Clean Energy", "SDG 9: Industry, Innovation, and Infrastructure", "SDG 11: Sustainable Cities and Communities", "SDG 13: Climate Action"],
+        answer: "SDG 7: Affordable and Clean Energy"
+    },
+    {
+        question: "Which Sustainable Development Goal focuses on promoting sustained, inclusive, and sustainable economic growth, full and productive employment, and decent work for all?",
+        options: ["SDG 8: Decent Work and Economic Growth", "SDG 10: Reduced Inequalities", "SDG 11: Sustainable Cities and Communities", "SDG 12: Responsible Consumption and Production"],
+        answer: "SDG 8: Decent Work and Economic Growth"
+    },
+    {
+        question: "Which Sustainable Development Goal aims to make cities and human settlements inclusive, safe, resilient, and sustainable?",
+        options: ["SDG 11: Sustainable Cities and Communities", "SDG 12: Responsible Consumption and Production", "SDG 13: Climate Action", "SDG 14: Life Below Water"],
+        answer: "SDG 11: Sustainable Cities and Communities"
+    },
+    {
+        question: "Which Sustainable Development Goal focuses on combating climate change and its impacts?",
+        options: ["SDG 13: Climate Action", "SDG 14: Life Below Water", "SDG 15: Life on Land", "SDG 16: Peace, Justice, and Strong Institutions"],
+        answer: "SDG 13: Climate Action"
+    },
+    {
+        question: "Which Sustainable Development Goal aims to promote peaceful and inclusive societies for sustainable development, provide access to justice for all, and build effective, accountable, and inclusive institutions at all levels?",
+        options: ["SDG 16: Peace, Justice, and Strong Institutions", "SDG 17: Partnerships for the Goals", "SDG 1: No Poverty", "SDG 2: Zero Hunger"],
+        answer: "SDG 16: Peace, Justice, and Strong Institutions"
+    },
+    {
+        question: "Which Sustainable Development Goal focuses on strengthening the means of implementation and revitalizing the global partnership for sustainable development?",
+        options: ["SDG 17: Partnerships for the Goals", "SDG 1: No Poverty", "SDG 2: Zero Hunger", "SDG 3: Good Health and Well-being"],
+        answer: "SDG 17: Partnerships for the Goals"
+    }
+];
+
+    // Add more questions as needed
+;
+
+const quizForm = document.getElementById("quiz-form");
+const questionElement = document.getElementById("question");
+const optionsContainer = document.getElementById("options-container");
+const scoreContainer = document.getElementById("score-container");
+const scoreElement = document.getElementById("score");
+let currentQuestionIndex = 0;
+let score = 0;
+const timeLimit = 60; // Time limit for the entire quiz in seconds
+let timer;
+
+// Function to display current question
+function displayQuestion() {
+    const currentQuestion = questions[currentQuestionIndex];
+    questionElement.textContent = currentQuestion.question;
+
+    optionsContainer.innerHTML = "";
+    currentQuestion.options.forEach((option, index) => {
+        const input = document.createElement("input");
+        input.type = "radio";
+        input.name = "option";
+        input.value = option;
+        input.id = `option${index}`;
+        const label = document.createElement("label");
+        label.textContent = option;
+        label.htmlFor = `option${index}`;
+        optionsContainer.appendChild(input);
+        optionsContainer.appendChild(label);
+        optionsContainer.appendChild(document.createElement("br"));
+    });
+}
+
+// Function to handle form submission
+function handleSubmit(event) {
+    event.preventDefault();
+    const selectedOption = document.querySelector('input[name="option"]:checked');
+    if (!selectedOption) return;
+    if (selectedOption.value === questions[currentQuestionIndex].answer) {
+        score++;
+    }
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+        displayQuestion();
+    } else {
+        clearInterval(timer);
+        showScore();
+    }
+}
+
+// Function to start the quiz timer
+function startTimer() {
+    let timeRemaining = timeLimit;
+    timer = setInterval(() => {
+        if (timeRemaining <= 0) {
+            clearInterval(timer);
+            showScore();
+        } else {
+            timeRemaining--;
+        }
+    }, 1000);
+}
+
+// Function to display final score
+function showScore() {
+    quizForm.style.display = "none";
+    scoreContainer.style.display = "block";
+    scoreElement.textContent = `${score}/${questions.length}`;
+}
+
+// Event listeners
+quizForm.addEventListener("submit", handleSubmit);
+
+// Display first question
+displayQuestion();
+
+// Start timer
+startTimer();
+
+
+
+
+
+
+
+
+
+// const sidebar = document.getElementById("sidebar");
+// const sidebarToggle = document.getElementById("sidebar-toggle");
+// const mainContent = document.getElementById("main-content");
+
+// sidebarToggle.addEventListener("click", () => {
+//     sidebar.classList.toggle("active");
+//     mainContent.classList.toggle("active");
+// });
+
+
+
+
+const quizProgress = {
+        attempts: 1, // Increase attempts count each time quiz is completed
+        score: 70 // Example score (you can calculate based on actual quiz result)
+    };
+
+    // Save quiz progress to local storage
+    saveProgressToLocalStorage(quizProgress);
+
+    // Optionally, redirect user to progress tracking page after saving progress
+    window.location.href = "progress.html";
+
+
+// Event listener for the start quiz button
+document.getElementById("start-quiz").addEventListener("click", startQuiz);
+
+
+
+
+    </script> <!-- Link to your JavaScript file -->
+</body>
+</html>

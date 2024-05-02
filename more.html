@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Goals - More</title>
+<link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+<style>
+    /* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+/* Main Content styles */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.more-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px; /* Increase the gap between content boxes */
+}
+
+.feature {
+    flex: 1 1 calc(30% - 20px); /* Adjust width as needed */
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none; /* Remove default underline */
+    color: #333; /* Set text color */
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.feature img {
+    width: 80px; /* Adjust size as needed */
+    margin-bottom: 10px;
+}
+
+.feature h2 {
+    margin-bottom: 10px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.footer-bar {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-bar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-bar a:hover {
+    color: #ccc;
+}
+
+.footer-bar a.active {
+    text-decoration: underline; /* Add underline to the active link */
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .more-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        width: 90%;
+        margin: 0 auto 20px;
+    }
+}
+
+</style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Additional Features</h1>
+    </header>
+    
+    <!-- Main Content -->
+    <main>
+        <section class="more-section">
+            <a href="quiz.html" class="feature">
+                <img src="https://static.vecteezy.com/system/resources/previews/018/766/186/non_2x/quiz-guess-social-media-icon-in-flat-style-faq-illustration-on-isolated-background-help-button-sign-business-concept-vector.jpg" alt="Quiz Icon">
+                <h2>Quizzes</h2>
+                <p>Create interactive quizzes to test your knowledge about the Sustainable Development Goals.</p>
+            </a>
+            <a href="progress.html" class="feature">
+                <img src="https://cdn.vectorstock.com/i/500p/14/65/growth-progress-arrow-vector-49461465.jpg" alt="Progress Tracking Icon">
+                <h2>Progress Tracking</h2>
+                <p>Track your progress in supporting the SDGs and set goals to make a difference.</p>
+            </a>
+            <a href="" class="feature">
+                <img src="https://www.shareicon.net/data/512x512/2016/02/26/725210_users_512x512.png" alt="Social Sharing Icon">
+                <h2>Social Sharing</h2>
+                <p>Share your achievements and favorite content from the app with friends and followers on social media.</p>
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-bar">
+            <a href="https://ankit-patel2011.github.io/Global-Goals-Prac/index.html">Home</a>
+            <a href="https://ankit-patel2011.github.io/Global-Goals-Prac/news.html">News</a>
+            <a href="https://ankit-patel2011.github.io/Global-Goals-Prac/globalgoals.html"> Global goals</a>
+            <a href="https://ankit-patel2011.github.io/Global-Goals-Prac/Donate.html">Donate</a>
+            <a href="https://ankit-patel2011.github.io/Global-Goals-Prac/more.html">More</a>
+        </div>
+    </footer>
+</body>
+</html>

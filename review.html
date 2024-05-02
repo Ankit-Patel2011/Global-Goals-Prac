@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Website</title>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <style>
+        /* Your styles go here */
+    </style>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #review-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+
+    </style>
+
+
+
+
+</head>
+<body>
+
+
+    <form
+    action="https://formspree.io/f/xkndgddn"
+    method="POST"
+  >
+
+
+<div id="review-form">
+    <!-- Your form goes here -->
+    <div id="review-form">
+        <h2>Leave a Review</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    
+        <label for="rating">Rating:</label>
+        <input type="number" id="rating" name="rating" min="1" max="5" required>
+    
+        <label for="review">Review:</label>
+        <textarea id="review" name="review" rows="4" required></textarea>
+    
+        <button onclick="submitReview()">Submit Review</button>
+    </div>
+    
+    
+</div>
+
+<script >
+
+
+
+
+    // emailjs.init("user_your_emailjs_user_id");
+
+    // function submitReview() {
+    //     var name = document.getElementById("name").value;
+    //     var email = document.getElementById("email").value;
+    //     var rating = document.getElementById("rating").value;
+    //     var review = document.getElementById("review").value;
+
+    //     // Prepare the email template parameters
+    //     var templateParams = {
+    //         name: name,
+    //         email: email,
+    //         rating: rating,
+    //         review: review
+    //     };
+
+        // Send the email
+        // emailjs.send("ankit2011616@gmail", "ankit2011616@gmail.com", templateParams)
+        //     .then(function(response) {
+        //         console.log("Email sent successfully:", response);
+        //         alert("Thank you for your review! It has been sent successfully.");
+        //     }, function(error) {
+        //         console.log("Failed to send email:", error);
+        //         alert("Oops! Something went wrong. Please try again later.");
+        //     });
+  //  }
+ </script>
+
+</body>
+</html>

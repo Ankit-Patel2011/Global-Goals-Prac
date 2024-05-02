@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Sharing</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Your CSS styles go here */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+button.open-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    border-bottom: 1px solid #555;
+}
+
+.sidebar ul li:last-child {
+    border-bottom: none;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar ul li button {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+section {
+    margin-top: 20px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+#submission-form {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+#submission-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#submission-form input[type="text"],
+#submission-form textarea,
+#submission-form input[type="url"],
+#submission-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#submission-form textarea {
+    height: 100px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Social Sharing</h1>
+    </header>
+    <button class="open-btn" onclick="openSidebar()"><i class="fas fa-bars"></i></button>
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <a href="https://ankit-patel2011.github.io/Global-Goals-Prac/index.html">Home</a>
+            <a href="https://ankit-patel2011.github.io/Global-Goals-Prac/news.html">News</a>
+            <a href="https://ankit-patel2011.github.io/Global-Goals-Prac/globalgoals.html"> Global goals</a>
+            <a href="https://ankit-patel2011.github.io/Global-Goals-Prac/Donate.html">Donate</a>
+            <a href="https://ankit-patel2011.github.io/Global-Goals-Prac/more.html">More</a>
+            <li><button onclick="closeSidebar()">Close Sidebar</button></li>
+        </ul>
+    </div>
+    <div class="container">
+        <section id="submission-form">
+            <h2>Submit Your Work</h2>
+            <form action="https://formspree.io/f/mrgnjaaq" method="POST">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="work">Your Work:</label>
+                <textarea id="work" name="work" required></textarea>
+                <label for="link">Link to Your Work:</label>
+                <input type="url" id="link" name="link" placeholder="https://example.com/your_work" required>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Social Sharing</p>
+    </footer>
+
+    <script src="script.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>

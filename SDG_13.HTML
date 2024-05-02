@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDG-13: Climate Action</title>
+    <style>
+        /* Common styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f6f6f6; /* Light gray background */
+            color: #333; /* Default text color */
+            font-size: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #009688; /* Teal color for header */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .sdg-info {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .sdg-info h1, .sdg-info h2 {
+            color: #009688; /* Teal color for headings */
+            margin-top: 0;
+        }
+
+        .sdg-info p {
+            color: #444; /* Darker gray text color */
+            margin-bottom: 1em;
+        }
+
+        .sdg-info .highlight {
+            font-weight: bold;
+            color: #009688; /* Teal color for highlighted text */
+        }
+
+        .sdg-info ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-bottom: 1em;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer-bar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .footer-bar a:hover {
+            color: #ffcc00; /* Yellow color on hover */
+        }
+        
+.footer-bar a:hover {
+    color: #ffcc00; /* Yellow on hover */
+    background-color: #ebebe43c;
+    border: 2px solid grey;
+    font-weight: bolder;
+    
+}
+
+
+        /* Sidebar styles */
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            z-index: 1;
+        }
+
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidebar .close-btn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SDG-13: Climate Action</h1>
+        <span style="font-size:30px;cursor:pointer;color: #fff;" onclick="openNav()">&#9776;</span>
+    </header>
+    
+    <!-- Sidebar -->
+    <div class="sidebar" id="mySidebar">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+        <a href="https://ankit-patel2011.github.io/Global-Goals-Prac/CantactMe.html">About Us</a>
+        <a href="https://ankit-patel2011.github.io/Global-Goals-Prac/review.html">Review</a>
+        <a href="https://ankit-patel2011.github.io/Global-Goals-Prac/index.html">Back</a>
+        <a href="https://ankit-patel2011.github.io/Global-Goals-Prac/CantactMe.html">Contact Us</a>
+        <!-- Add more sidebar links as needed -->
+    </div>
+
+    <div class="content">
+        <div class="sdg-info">
+            <h1>About SDG-13</h1>
+            <p><span class="highlight">SDG-13: Climate Action</span> aims to take urgent action to combat climate change and its impacts.</p>
+            <h2>Key Objectives</h2>
+            <ul>
+                <li>Strengthen resilience and adaptive capacity to climate-related hazards and natural disasters.</li>
+                <li>Integrate climate change measures into national policies, strategies, and planning.</li>
+                <li>Improve education, awareness-raising, and human and institutional capacity on climate change mitigation, adaptation, impact reduction, and early warning.</li>
+                <li>Promote mechanisms for raising capacity for effective climate change-related planning and management in least developed countries and small island developing States, including focusing on women, youth, local and marginalized communities.</li>
+            </ul>
+            <h2>Strategies</h2>
+            <p>To achieve SDG-13, efforts are needed to reduce greenhouse gas emissions, enhance climate resilience, promote sustainable land use and forest management, invest in renewable energy and energy efficiency, and mobilize climate finance and technology transfer.</p>
+            <h2>Challenges</h2>
+            <p>Despite progress, challenges such as rising global temperatures, extreme weather events, sea-level rise, biodiversity loss, and limited access to climate finance continue to pose significant obstacles to achieving climate action and sustainable development.</p>
+            <h2>Impact of COVID-19</h2>
+            <p>The COVID-19 pandemic has highlighted the interconnectedness of global challenges, including climate change, and the need for integrated responses to build resilience and ensure a sustainable and inclusive recovery.</p>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-bar">
+            <a href="https://ankit-patel2011.github.io/Global-Goals-Prac/index.html">Home</a>
+            <a href="https://ankit-patel2011.github.io/Global-Goals-Prac/news.html">News</a>
+            <a href="https://ankit-patel2011.github.io/Global-Goals-Prac/globalgoals.html"> Global goals</a>
+            <a href="https://ankit-patel2011.github.io/Global-Goals-Prac/Donate.html">Donate</a>
+            <a href="https://ankit-patel2011.github.io/Global-Goals-Prac/more.html">More</a>
+        </div>
+    </footer>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+        }
+        
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
+    </script>
+</body>
+</html>

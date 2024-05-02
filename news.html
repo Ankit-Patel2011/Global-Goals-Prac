@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <style>
+        /* News screen styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #28a745; /* Green color for header */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .news {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .news article {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .news article:hover {
+            transform: translateY(-5px); /* Apply slight upward lift on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow size on hover */
+        }
+
+        .news article h2 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .news article p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .news article a {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 3px;
+            transition: background-color 0.3s;
+        }
+
+        .news article a:hover {
+            background-color: #555; /* Darken background color on hover */
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            color: #ffcc00;
+        }
+        
+.footer-bar a:hover {
+    color: #ffcc00; /* Yellow on hover */
+    background-color: #ebebe43c;
+    border: 2px solid grey;
+    font-weight: bolder;
+    
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Latest News</h1>
+    </header>
+    
+    <div class="content">
+        <section class="news">
+            <article>
+                <h2>Breaking News Title 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id nisi dolor.</p>
+                <a href="#">Read More</a>
+            </article>
+            <article>
+                <h2>Breaking News Title 2</h2>
+                <p>Nulla consectetur lectus at leo ultrices, ac efficitur neque hendrerit.</p>
+                <a href="#">Read More</a>
+            </article>
+            <!-- Add more articles as needed -->
+        </section>
+    </div>
+    
+    <footer>
+        <div class="footer-bar">
+            <a href="https://ankit-patel2011.github.io/Global-Goals-Prac/index.html">Home</a>
+            <a href="https://ankit-patel2011.github.io/Global-Goals-Prac/news.html">News</a>
+            <a href="https://ankit-patel2011.github.io/Global-Goals-Prac/globalgoals.html"> Global goals</a>
+            <a href="https://ankit-patel2011.github.io/Global-Goals-Prac/Donate.html">Donate</a>
+            <a href="https://ankit-patel2011.github.io/Global-Goals-Prac/more.html">More</a>
+        </div>
+    </footer>
+</body>
+</html>
